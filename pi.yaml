@@ -1,0 +1,15 @@
+---
+  - hosts: all
+    gather_facts: yes
+    become: yes
+    roles: [ "PiBase" ]
+    remote_user: pi
+
+    vars_prompt:
+
+    - name: "my_pi_pw"
+      prompt: "Enter pi user password"
+      private: yes
+      encrypt: "sha512_crypt"
+      confirm: yes
+      salt_size: 7
