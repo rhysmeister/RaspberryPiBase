@@ -1,5 +1,4 @@
 ---
-  default_root_pw: raspberry
   additional_packages:
     - net-tools
     - wget
